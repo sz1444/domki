@@ -33,7 +33,7 @@ export function Hero() {
                <p className="text-base">DOMKI | SAUNA | JACUZZI </p>
                <p className="mt-2 mb-4">NASZ POMYSŁ NA ODPOCZYNEK</p>
                <LinkButton>Zarezerwuj</LinkButton>
-               <LinkButton className="ml-4" href="/gallery">Zobacz Galierę</LinkButton>           
+               <LinkButton className="md:ml-4" href="/gallery">Zobacz Galierę</LinkButton>           
             </div>
         </div>
     )
