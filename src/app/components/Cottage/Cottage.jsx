@@ -5,7 +5,7 @@ export function Cottage({children, image, name, reverse}) {
     return (
         <div className="duration-300 rounded-sm flex flex-row flex-wrap lg:flex-nowrap lg:flex-row bg-white shadow-2xl group">
             <Image
-                className={`transition-all m-auto w-full p-2 md:w-1/2 bg-white group-hover:border group-hover:-rotate-6 group-hover:shadow-xl`}
+                className={`transition-all m-auto w-full p-2 md:w-1/2 bg-white group-hover:border group-hover:-rotate-6 group-hover:shadow-xl group-hover:scale-105`}
                 src="/hero.jpg"
                 alt="Sekcja Hero"
                 width={403}
