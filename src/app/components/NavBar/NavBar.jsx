@@ -9,20 +9,11 @@ const menuClassScrolled = "bg-white drop-shadow-md text-black";
 
 export function NavBar() {
     const pathname = usePathname();
-    const [scrollPosistion, setScrollPosition] = useState(window ? window.pageYOffset : 0);
+    const [scrollPosistion, setScrollPosition] = useState(0);
 
-
-    const getMenuAppearance = () => {
-        const menuTransparent = "text-white py-10 transparent";
-
-        const menuColor = "bg-white drop-shadow-md text-black";
-
-        if (pathname != '/') return menuColor;
-
-        if (scrollPosistion > 100) return menuColor;
-
-        return menuTransparent;
-    }
+    useEffect(() => {
+        setScrollPosition(window.pageYOffset);
+    }, [])
 
     useEffect(() => {
         const handleScroll = e => {
@@ -35,7 +26,18 @@ export function NavBar() {
           window.removeEventListener('scroll', handleScroll);
         };
       }, [scrollPosistion]);
-    
+
+    const getMenuAppearance = () => {
+        const menuTransparent = "text-white py-10 transparent";
+
+        const menuColor = "bg-white drop-shadow-md text-black";
+
+        if (pathname != '/') return menuColor;
+
+        if (scrollPosistion > 100) return menuColor;
+
+        return menuTransparent;
+    }    
 
     return (
         <div
