@@ -1,6 +1,10 @@
 import { Inter } from 'next/font/google'
 import './globals.css'
 import { NavBar } from './components/NavBar/NavBar'
+import { Footer } from './components/Footer/Footer'
+import { Container } from './components/Container/Container'
+import { SectionPage } from './components/SectionPage/SectionPage'
+import { Contact } from './components/Contact/Contact'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -15,6 +19,17 @@ export default function RootLayout({ children }) {
       <body className={inter.className}>
         <NavBar />
         {children}
+        <div className="bg-slate-100"> 
+          <Container>
+            <SectionPage
+              header="📨 Kontakt"
+              subheader="Skontaktuj się z nami w celu rezerwacji domku!"
+            >
+              <Contact />
+            </SectionPage>
+          </Container>
+        </div>
+        <Footer/>
       </body>
     </html>
   )

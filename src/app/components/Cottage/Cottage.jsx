@@ -1,19 +1,18 @@
 import Image from "next/image";
-import { LinkButton } from "../LinkButton/LinkButton";
 import { LinkButtonMain } from "../LinkButtonMain/LinkButtonMain";
 
 export function Cottage({children, image, name, reverse}) {
     return (
-        <div className={`shadow-xl flex flex-row flex-wrap lg:flex-nowrap ${reverse ? 'lg:flex-row-reverse' : 'lg:flex-row'}`}>
+        <div className="duration-300 rounded-sm flex flex-row flex-wrap lg:flex-nowrap lg:flex-row bg-white shadow-2xl group">
             <Image
-                className="m-auto w-full"
+                className={`transition-all m-auto w-full p-2 md:w-1/2 bg-white group-hover:border group-hover:-rotate-6 group-hover:shadow-xl`}
                 src="/hero.jpg"
                 alt="Sekcja Hero"
                 width={403}
                 height={403}
             />
-            <div className="p-6 md:p-8 flex flex-col justify-center">
-                <h3 className="uppercase font-light mb-2 text-left w-full">{name}</h3>
+            <div className="p-6 md:p-8 flex flex-col justify-center md:w-1/2">
+                <h3 className="uppercase font-light mb-2 text-left w-full text-xl">{name}</h3>
                 <p className="
                     font-extralight
                     w-full

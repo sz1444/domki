@@ -17,6 +17,7 @@ export function Hero() {
                     text-white
                     absolute
                     text-2xl
+                    md:text-4xl
                     font-extralight
                     w-full
                     max-w-[40rem]
@@ -29,9 +30,10 @@ export function Hero() {
                     shado
                 "
             >
-               <p className="text-sm">DOMKI | SAUNA | JACUZZI </p>
-               <p>NASZ POMYSŁ NA ODPOCZYNEK</p>
-               <LinkButton>Zarezerwuj</LinkButton>               
+               <p className="text-base">DOMKI | SAUNA | JACUZZI </p>
+               <p className="mt-2 mb-4">NASZ POMYSŁ NA ODPOCZYNEK</p>
+               <LinkButton>Zarezerwuj</LinkButton>
+               <LinkButton className="ml-4" href="/gallery">Zobacz Galierę</LinkButton>           
             </div>
         </div>
     )

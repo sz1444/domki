@@ -1,7 +1,7 @@
 const MENU = [
     {
         name: 'Home',
-        link: 'home'
+        link: '/'
     },
     {
         name: 'Oferta',
@@ -12,8 +12,8 @@ const MENU = [
         link: 'atrakcje'
     },
     {
-        name: 'Cennik',
-        link: 'cennik'
+        name: 'Galeria',
+        link: 'gallery'
     },
     {
         name: 'Kontakt',

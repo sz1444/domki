@@ -3,11 +3,26 @@ import { useEffect, useState } from "react";
 import { Logo } from "../Logo/Logo";
 import { ContactPhone } from "../ContactPhone/ContactPhone";
 import { MainMenuWrapper } from "../MainMenuWrapper/MainMenuWrapper";
+import { usePathname } from "next/navigation";
 
 const menuClassScrolled = "bg-white drop-shadow-md text-black";
 
 export function NavBar() {
-    const [scrollPosistion, setScrollPosition] = useState(0);
+    const pathname = usePathname();
+    const [scrollPosistion, setScrollPosition] = useState(window.pageYOffset);
+
+
+    const getMenuAppearance = () => {
+        const menuTransparent = "text-white py-10 transparent";
+
+        const menuColor = "bg-white drop-shadow-md text-black";
+
+        if (pathname != '/') return menuColor;
+
+        if (scrollPosistion > 100) return menuColor;
+
+        return menuTransparent;
+    }
 
     useEffect(() => {
         const handleScroll = e => {
@@ -34,14 +49,15 @@ export function NavBar() {
                 top-0
                 left-0
                 transition-all
-                ${scrollPosistion > 100 ? menuClassScrolled : 'text-white py-10'}`
+                group
+                ${getMenuAppearance()}`
             }
         >
             <div>
                 <Logo />
                 <ContactPhone />
             </div>
-            <MainMenuWrapper isScrolled={scrollPosistion > 100}/>
+            <MainMenuWrapper />
         </div>
     )
 }

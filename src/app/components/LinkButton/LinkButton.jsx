@@ -1,16 +1,17 @@
-export function LinkButton({children, href}) {
+export function LinkButton({children, href, className = ""}) {
     return (
         <a
-            className="
+            className={`
                 inline-block
                 text-xl
                 border
                 rounded-full
                 mx-auto
                 mt-4
-                py-1
-                px-5
-            "
+                p-2
+                min-w-[15rem]
+                ${className}
+            `}
             href={href}
         >
             {children}
