@@ -9,7 +9,7 @@ const menuClassScrolled = "bg-white drop-shadow-md text-black";
 
 export function NavBar() {
     const pathname = usePathname();
-    const [scrollPosistion, setScrollPosition] = useState(window.pageYOffset);
+    const [scrollPosistion, setScrollPosition] = useState(window ? window.pageYOffset : 0);
 
 
     const getMenuAppearance = () => {
