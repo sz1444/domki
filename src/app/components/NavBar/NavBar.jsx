@@ -12,7 +12,9 @@ export function NavBar() {
     const [scrollPosistion, setScrollPosition] = useState(0);
 
     useEffect(() => {
-        setScrollPosition(window.pageYOffset);
+        if (typeof window !== "undefined") {
+            setScrollPosition(window.pageYOffset);
+        }
     }, [])
 
     useEffect(() => {
