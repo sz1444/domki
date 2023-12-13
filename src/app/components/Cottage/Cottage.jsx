@@ -1,7 +1,11 @@
 import Image from "next/image";
-import { LinkButtonMain } from "../LinkButtonMain/LinkButtonMain";
+import { ButtonMain } from "../ButtonMain/ButtonMain";
+import { useContext } from "react";
+import { ModalContext } from "@/app/contexts/ModalContext";
 
-export function Cottage({children, image, name, reverse}) {
+export function Cottage({children, image, name}) {
+    const [isOpen, setIsOpen] = useContext(ModalContext);
+
     return (
         <div className="duration-300 rounded-sm flex flex-row flex-wrap lg:flex-nowrap lg:flex-row bg-white shadow-2xl group">
             <Image
@@ -19,7 +23,7 @@ export function Cottage({children, image, name, reverse}) {
                 ">
                     {children}
                 </p>
-                <LinkButtonMain>Zarazerwuj</LinkButtonMain>
+                <ButtonMain onClick={setIsOpen}>Zarazerwuj</ButtonMain>
             </div>
         </div>
     )

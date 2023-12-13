@@ -2,9 +2,12 @@
 
 import { useState } from "react"
 import { MainMenu } from "../MainMenu/MainMenu";
+import { useScrollVisable } from "@/app/hooks/useScrollVisable";
 
 export function MainMenuWrapper() {
     const [isOpen, setIsOpen] = useState(false);
+
+    useScrollVisable(!isOpen);
 
     return (
         <>

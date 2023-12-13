@@ -1,5 +1,5 @@
 import { EMAIL, PHON_NUMBER } from "@/app/static/contact";
-import { LinkButtonMain } from "../LinkButtonMain/LinkButtonMain";
+import { ButtonMain } from "../ButtonMain/ButtonMain";
 import { ContactBlock } from "../ContactBlock/ContactBlock";
 
 export function Contact() {

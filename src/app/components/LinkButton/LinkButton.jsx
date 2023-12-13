@@ -1,6 +1,7 @@
-export function LinkButton({children, href, className = ""}) {
+export function LinkButton({children, href, onClick, className = ""}) {
     return (
         <a
+            onClick={onClick}
             className={`
                 inline-block
                 text-xl
@@ -10,6 +11,7 @@ export function LinkButton({children, href, className = ""}) {
                 mt-4
                 p-2
                 min-w-[15rem]
+                cursor-pointer
                 ${className}
             `}
             href={href}

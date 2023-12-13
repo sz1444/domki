@@ -13,7 +13,7 @@ export function Attraction({children, image}) {
             <p className="
                     text-white
                     absolute
-                    font-extralight
+                    font-light
                     w-full
                     max-w-[40rem]
                     top-1/2
@@ -25,4 +25,4 @@ export function Attraction({children, image}) {
                 ">{children}</p>
         </div>
     )
-} 
+}

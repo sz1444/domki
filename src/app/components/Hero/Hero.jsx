@@ -1,7 +1,11 @@
 import Image from "next/image";
 import { LinkButton } from "../LinkButton/LinkButton";
+import { useContext } from "react";
+import { ModalContext } from "@/app/contexts/ModalContext";
 
 export function Hero() {
+    const [,setIsOpenModal] = useContext(ModalContext);
+
     return (
         <div className="relative h-screen">
             <Image
@@ -30,10 +34,10 @@ export function Hero() {
                     shado
                 "
             >
-               <p className="text-base">DOMKI | SAUNA | JACUZZI </p>
+               <p className="text-xs md:text-base">DOMKI | SAUNA | JACUZZI </p>
                <p className="mt-2 mb-4">NASZ POMYSŁ NA ODPOCZYNEK</p>
-               <LinkButton>Zarezerwuj</LinkButton>
-               <LinkButton className="md:ml-4" href="/gallery">Zobacz Galierę</LinkButton>           
+               <LinkButton onClick={() => setIsOpenModal(true)}>Zarezerwuj</LinkButton>
+               <LinkButton className="md:ml-4" href="/gallery">Zobacz Galerię</LinkButton>           
             </div>
         </div>
     )

@@ -16,6 +16,77 @@
   }
 }
 
-body {
 
+/* Datepicker Start */
+
+body .react-datepicker__header {
+  border: 0;
+  background-color: transparent;
+  border-bottom: 1px solid #eee;
 }
+
+body .react-datepicker {
+  border: 1px solid #eee;;
+  width: 100%;
+  --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+body .react-datepicker__month-container {
+  width: 100%;
+}
+
+body .react-datepicker__day-name, body .react-datepicker__day,body .react-datepicker__time-name {
+  width: calc(100% / 7 - 0.332rem);
+  line-height: 1.5rem;
+}
+
+
+body .react-datepicker__current-month {
+  padding: .7rem;
+  font-weight: 500;
+}
+
+body .react-datepicker__navigation {
+  top: .5rem
+}
+
+body .react-datepicker__day--in-range,
+body .react-datepicker__day--in-range:hover,
+body .react-datepicker__day--in-range:focus,
+body .react-datepicker__day--selected,
+body .react-datepicker__day--selected:hover {
+  background-color: #65a30d;
+}
+
+body .react-datepicker__day--selecting-range-start {
+  background-color: #000;
+}
+
+body .react-datepicker__day--in-selecting-range:not(.react-datepicker__day--in-range,
+body .react-datepicker__month-text--in-range,
+body .react-datepicker__quarter-text--in-range,
+body .react-datepicker__year-text--in-range),
+body .react-datepicker__month-text--in-selecting-range:not(.react-datepicker__day--in-range,
+body .react-datepicker__month-text--in-range,
+body .react-datepicker__quarter-text--in-range,
+body .react-datepicker__year-text--in-range),
+body .react-datepicker__quarter-text--in-selecting-range:not(.react-datepicker__day--in-range,
+body .react-datepicker__month-text--in-range,
+body .react-datepicker__quarter-text--in-range,
+body .react-datepicker__year-text--in-range),
+body .react-datepicker__year-text--in-selecting-range:not(.react-datepicker__day--in-range,
+body .react-datepicker__month-text--in-range,
+body .react-datepicker__quarter-text--in-range,
+body .react-datepicker__year-text--in-range) {
+  background-color: #64a30dbe;
+}
+
+body .react-datepicker__day--keyboard-selected,
+body .react-datepicker__month-text--keyboard-selected,
+body .react-datepicker__quarter-text--keyboard-selected {
+  color: #fff;
+}
+
+/* Datepicker End */
