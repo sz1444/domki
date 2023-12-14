@@ -1,6 +1,8 @@
-export function LinkButton({children, href, onClick, className = ""}) {
+import Link from "next/link";
+
+export function LinkButton({children, href = '', onClick, className = ""}) {
     return (
-        <a
+        <Link
             onClick={onClick}
             className={`
                 inline-block
@@ -17,7 +19,7 @@ export function LinkButton({children, href, onClick, className = ""}) {
             href={href}
         >
             {children}
-        </a>
+        </Link>
     ) 
     
 }
